@@ -174,5 +174,4 @@ AI-powered assistant for:
 ---
 
 # 📦 Installation
-git clone https://github.com/yourusername/crowd-control.git
-(https://github.com/namit-code-dev/crowd_control_app)
+git clone (https://github.com/namit-code-dev/crowd_control_app)
