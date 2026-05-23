@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- TITLE -->
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="YOUR TICKET"
+        android:textColor="#4CAF50"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- CARD -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="338dp"
+        android:layout_height="659dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView16">
+
+        <FrameLayout
+            android:layout_width="334dp"
+            android:layout_height="678dp">
+
+            <!-- MAIN TICKET -->
+            <LinearLayout
+                android:layout_width="313dp"
+                android:layout_height="657dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ticket_border"
+                android:orientation="vertical">
+
+                <!-- TOP STRIP -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#4CAF50" />
+
+                <ScrollView
+                    android:layout_width="330dp"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="330dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <!-- TITLE -->
+                        <TextView
+                            android:layout_width="290dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="🎟 TICKET"
+                            android:textColor="#333"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <!-- NAME -->
+                        <TextView
+                            android:layout_width="290dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Full Name"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/etName"
+                            android:layout_width="290dp"
+                            android:layout_height="40dp"
+                            android:textColor="#000" />
+
+                        <!-- GENDER + PEOPLE -->
+                        <LinearLayout
+                            android:layout_width="290dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="145dp"
+                                android:layout_height="80dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="145dp"
+                                    android:layout_height="30dp"
+                                    android:text="Gender"
+                                    android:textColor="#777" />
+
+                                <TextView
+                                    android:id="@+id/gender"
+                                    android:layout_width="145dp"
+                                    android:layout_height="40dp"
+                                    android:textColor="#000" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="145dp"
+                                android:layout_height="80dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="145dp"
+                                    android:layout_height="30dp"
+                                    android:text="People"
+                                    android:textColor="#777" />
+
+                                <TextView
+                                    android:id="@+id/people"
+                                    android:layout_width="145dp"
+                                    android:layout_height="40dp"
+                                    android:textColor="#000" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- DOB -->
+                        <TextView
+                            android:layout_width="290dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Date of Birth"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/dob"
+                            android:layout_width="290dp"
+                            android:layout_height="40dp"
+                            android:textColor="#000" />
+
+                        <!-- AADHAR -->
+                        <TextView
+                            android:layout_width="290dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Aadhar Number"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/aadharno"
+                            android:layout_width="290dp"
+                            android:layout_height="40dp"
+                            android:textColor="#000" />
+
+                        <!-- ADDRESS -->
+                        <TextView
+                            android:layout_width="290dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Address"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/etAddress"
+                            android:layout_width="290dp"
+                            android:layout_height="60dp"
+                            android:textColor="#000" />
+
+                        <!-- TEAR LINE -->
+                        <View
+                            android:layout_width="290dp"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="20dp"
+                            android:background="#BDBDBD" />
+
+                        <!-- SLOT -->
+                        <TextView
+                            android:layout_width="290dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Your Slot"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/etslot"
+                            android:layout_width="290dp"
+                            android:layout_height="40dp"
+                            android:textColor="#4CAF50"
+                            android:textStyle="bold" />
+
+                        <!-- BOTTOM STRIP -->
+                        <View
+                            android:layout_width="290dp"
+                            android:layout_height="6dp"
+                            android:layout_marginTop="20dp"
+                            android:background="#4CAF50" />
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <!-- LEFT CUT -->
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|start"
+                android:background="@drawable/circle_cut"
+                android:translationX="-15dp" />
+
+            <!-- RIGHT CUT -->
+            <View
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/circle_cut"
+                android:translationX="15dp" />
+
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

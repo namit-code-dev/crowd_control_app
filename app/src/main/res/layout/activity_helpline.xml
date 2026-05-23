@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="361dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="40dp"
+        android:background="#D4FF5722"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/btn"
+            android:layout_width="45dp"
+            android:layout_height="44dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@null"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/home"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btn1"
+            android:layout_width="48dp"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/prasada"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btn2"
+            android:layout_width="45dp"
+            android:layout_height="43dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/analysis"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btn3"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/tickets"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+        <ImageButton
+            android:id="@+id/btn5"
+            android:layout_width="61dp"
+            android:layout_height="46dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/helpline"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHelpline"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FF5722"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="HELPLINE FORM"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/heartIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Scrollable Form -->
+    <ScrollView
+        android:id="@+id/scrollHelpline"
+        android:layout_width="344dp"
+        android:layout_height="595dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFF8E1"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarHelpline">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Name -->
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Full Name"
+                android:padding="12dp" />
+
+            <!-- Contact -->
+            <EditText
+                android:id="@+id/etContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Contact Number"
+                android:inputType="phone"
+                android:padding="12dp" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Email (optional)"
+                android:inputType="textEmailAddress"
+                android:padding="12dp" />
+
+            <!-- Type of Help -->
+            <TextView
+                android:layout_width="115dp"
+                android:layout_height="47dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Type of Help"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerHelpType"
+                android:layout_width="321dp"
+                android:layout_height="46dp"
+                android:layout_marginBottom="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <!-- Description -->
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="319dp"
+                android:layout_height="175dp"
+                android:layout_marginBottom="12dp"
+                android:background="@android:drawable/edit_text"
+                android:gravity="top"
+                android:hint="Describe your issue / request"
+                android:inputType="textMultiLine"
+                android:padding="12dp" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FB8C00"
+                android:padding="14dp"
+                android:text="Submit"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
